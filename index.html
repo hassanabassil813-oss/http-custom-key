@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTTP CUSTOM - الكود اليومي</title>
+<style>
+    body {
+        background: #0A0E1A;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
+    .container {
+        background: #141B2D;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 0 20px rgba(59,130,246,0.3);
+        max-width: 400px;
+        width: 90%;
+    }
+    h1 {
+        color: #3B82F6;
+    }
+    .code-box {
+        background: #0A0E1A;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        color: #10B981;
+        margin: 20px 0;
+        user-select: all;
+    }
+    .info {
+        color: #8892A6;
+        font-size: 14px;
+    }
+    .whatsapp {
+        margin-top: 20px;
+        padding: 12px 24px;
+        background: #25D366;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        display: inline-block;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>🎉 الكود الخاص بك</h1>
+    <p class="info">هذا الكود صالح لمدة 24 ساعة فقط</p>
+    <div class="code-box" id="daily-code">جاري الحساب...</div>
+    <p class="info">انسخ الكود وضعه في التطبيق</p>
+    <a href="https://whatsapp.com/channel/0029VbCar8vE50UaJ39Mw03a" class="whatsapp">📞 انضم لقناتنا</a>
+</div>
+<script>
+    // نفس المعادلة الموجودة في التطبيق
+    const now = Date.now();
+    const days = Math.floor(now / 86400000);
+    const codeNumber = days % 1000;
+    const code = "HTTP-" + codeNumber;
+    document.getElementById("daily-code").innerText = code;
+</script>
+</body>
+</html>
